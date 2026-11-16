@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Formulário demonstrativo do ARENA777." />
+    <title>ARENA777 | Formulário</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/estilos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark barra-navegacao">
+      <div class="container">
+        <a class="navbar-brand marca" href="index.html"
+          >ARENA<span>777</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuPrincipal"
+          aria-controls="menuPrincipal"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="formulario.html"
+                >Formulário</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="classificacao.html">Classificação</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pagina-interna">
+      <header class="cabecalho-pagina">
+        <div class="container">
+          <p class="etiqueta-secao">ARENA777</p>
+          <h1>Entre em contato</h1>
+          <p>Preencha os campos para participar desta demonstração.</p>
+        </div>
+      </header>
+
+      <section class="secao-conteudo pt-0">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="painel-formulario">
+                <h2>Formulário</h2>
+                <p class="descricao-formulario">
+                  Os campos marcados são obrigatórios.
+                </p>
+
+                <div
+                  id="mensagemSucesso"
+                  class="alert alert-success d-none"
+                  role="status"
+                >
+                  Formulário preenchido com sucesso!
+                </div>
+
+                <form id="formularioContato" novalidate>
+                  <div class="mb-3">
+                    <label for="nome" class="form-label">Nome completo</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nome"
+                      name="nome"
+                      placeholder="Seu nome"
+                      required
+                    />
+                    <div class="invalid-feedback">Informe seu nome.</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="correioEletronico" class="form-label"
+                      >E-mail</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="correioEletronico"
+                      name="correioEletronico"
+                      placeholder="nome@exemplo.com"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Informe um e-mail válido.
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="esporte" class="form-label"
+                        >Esporte favorito</label
+                      >
+                      <select
+                        class="form-select"
+                        id="esporte"
+                        name="esporte"
+                        required
+                      >
+                        <option value="" selected disabled>Selecione</option>
+                        <option>Futebol</option>
+                        <option>Basquete</option>
+                        <option>Automobilismo</option>
+                        <option>Outro</option>
+                      </select>
+                      <div class="invalid-feedback">Selecione uma opção.</div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="clube" class="form-label"
+                        >Clube favorito</label
+                      >
+                      <select
+                        class="form-select"
+                        id="clube"
+                        name="clube"
+                        required
+                      >
+                        <option value="" selected disabled>Selecione</option>
+                        <option>Real Madrid</option>
+                        <option>Barcelona</option>
+                        <option>Bayern de Munique</option>
+                        <option>Manchester City</option>
+                        <option>Liverpool</option>
+                        <option>Paris Saint-Germain</option>
+                        <option>Outro</option>
+                      </select>
+                      <div class="invalid-feedback">Selecione um clube.</div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="assunto" class="form-label">Assunto</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="assunto"
+                      name="assunto"
+                      placeholder="Assunto da mensagem"
+                      required
+                    />
+                    <div class="invalid-feedback">Informe o assunto.</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="mensagem" class="form-label">Mensagem</label>
+                    <textarea
+                      class="form-control"
+                      id="mensagem"
+                      name="mensagem"
+                      rows="4"
+                      placeholder="Escreva sua mensagem"
+                      required
+                    ></textarea>
+                    <div class="invalid-feedback">Escreva sua mensagem.</div>
+                  </div>
+
+                  <div class="form-check mb-4">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="confirmacaoAcademica"
+                      required
+                    />
+                    <label class="form-check-label" for="confirmacaoAcademica"
+                      >Entendi que este formulário é apenas uma demonstração
+                      escolar.</label
+                    >
+                    <div class="invalid-feedback">Marque a confirmação.</div>
+                  </div>
+
+                  <div class="d-flex flex-wrap gap-2">
+                    <button class="btn btn-primary" type="submit">
+                      Enviar
+                    </button>
+                    <button class="btn btn-outline-light" type="reset">
+                      Limpar
+                    </button>
+                  </div>
+                </form>
+
+                <p class="aviso-formulario">
+                  <i class="bi bi-info-circle"></i> Nenhuma informação será
+                  enviada ou armazenada.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <div class="container conteudo-rodape">
+        <div>
+          <a class="marca-rodape" href="index.html">ARENA<span>777</span></a>
+          <p>A emoção do esporte em um só lugar.</p>
+        </div>
+        <nav class="links-rodape" aria-label="Links do rodapé">
+          <a href="index.html">Início</a>
+          <a href="formulario.html">Formulário</a>
+          <a href="classificacao.html">Classificação</a>
+        </nav>
+        <small>Projeto acadêmico de Web Design · IFSP · 2026</small>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/validacao-formulario.js"></script>
+  </body>
+</html>
